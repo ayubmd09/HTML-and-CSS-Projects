@@ -1,0 +1,139 @@
+/* ------------------------------
+   PAGE STYLE
+--------------------------------*/
+body {
+    background-color: #fff;
+}
+
+h1 {
+    color: rgba(8, 141, 165, 1);
+    margin-left: 100px;
+    text-shadow: 1px .5px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* ------------------------------
+   CONTAINER
+--------------------------------*/
+.container {
+    width: 580px;
+    height: 450px;
+    background-color: #faebd7;
+    border: 2px solid black;
+    border-radius: 5%;
+}
+
+/* ---------------------------------------------------------
+   SELECT ALL SQUARES IN THE ARRAY
+----------------------------------------------------------*/
+.container .squares:nth-child(-n+5) {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60px;
+
+    color: #fff;
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 25%;
+    cursor: pointer;
+
+    transition: transform .5s ease-in-out;
+}
+
+/* ---------------------------------------------------------
+   SELECT ALL SQUARES PARAGRAPHS IN THE ARRAY
+----------------------------------------------------------*/
+.squares:nth-child(-n+5) p {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+    text-shadow: 2px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* ---------------------------------------------------------
+   INDIVIDUALLY SELECT A SQUARE IN THE ARRAY
+----------------------------------------------------------*/
+.squares:nth-child(1) {
+    background-color: #4240ff;
+    background-image: url("../images/icons/icons1.png");
+}
+
+.squares:nth-child(2) {
+    background-color: #ab3fdd;
+    background-image: url("../images/icons/icons1.png");
+}
+
+.squares:nth-child(3) {
+    background-color: #ae163e;
+    background-image: url("../images/icons/icons1.png");
+}
+
+.squares:nth-child(4) {
+    background-color: #a14f65;
+    background-image: url("../images/icons/icons1.png");
+}
+
+
+/* NEW ICON ADDED HERE */
+.squares:nth-child(5) {
+    background-color: #00b200;
+    background-image: url("../images/icons/icons3.png");
+}
+
+/* ---------------------------------------------------------
+   HOVER, TRANSLATE & TRANSFORM EFFECTS
+----------------------------------------------------------*/
+.container .squares:nth-child(-n+5):hover {
+
+    transform: scale(.5);
+
+    animation-name: race;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(2.5, .2, .3, 2);
+}
+
+.squares:nth-child(1):hover {
+    background-color: #13b4ff;
+    background-image: url("../images/icons/icons1.png");
+}
+
+.squares:nth-child(2):hover {
+    background-color: #d861af;
+    background-image: url("../images/icons/icons1.png");
+}
+
+.squares:nth-child(3):hover {
+    background-color: #81205f;
+    background-image: url("../images/icons/icons1.png");
+}
+
+.squares:nth-child(4):hover {
+    background-color: #77b800;
+    background-image: url("../images/icons/icons1.png");
+}
+
+.squares:nth-child(5):hover {
+    background-color: #ff6600;
+    background-image: url("../images/icons/icons3.png");
+}
+
+/* ---------------------------------------------------------
+   ANIMATION EFFECT
+----------------------------------------------------------*/
+@keyframes race {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(300px);
+    }
+
+}

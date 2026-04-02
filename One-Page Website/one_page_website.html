@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>The Space Station | Resort</title>
-	<link rel="stylesheet" href="./css/one_page_website.css">
+    <link rel="stylesheet" href="./css/one_page_website.css">
 </head>
 
 <body>
@@ -11,10 +12,18 @@
     <!-- NAV -->
     <nav>
         <ul>
-            <a href="#home"><li>HOME</li></a>
-            <a href="#gallery"><li>GALLERY</li></a>
-            <a href="#video"><li>VIDEO</li></a>
-            <a href="#contact"><li>RESERVATIONS</li></a>
+            <a href="#home">
+                <li>HOME</li>
+            </a>
+            <a href="#gallery">
+                <li>GALLERY</li>
+            </a>
+            <a href="#video">
+                <li>VIDEO</li>
+            </a>
+            <a href="#contact">
+                <li>RESERVATIONS</li>
+            </a>
         </ul>
     </nav>
     <!-- END NAV -->
@@ -37,19 +46,107 @@
             <h1>Gallery</h1>
 
             <div>
-                <img src="./images/thumb/thumbnail_1.jpg" alt="Image of solar system">
-                <img src="./images/thumb/thumbnail_2.jpg" alt="Image of earth">
-                <img src="./images/thumb/thumbnail_3.jpg" alt="Image of earth and moon">
-                <img src="./images/thumb/thumbnail_4.jpeg" alt="Freezing earth from outer space">
-                <img src="./images/thumb/thumbnail_5.jpg" alt="Sun and planets">
-                <img src="./images/thumb/thumbnail_6.jpg" alt="Image of Mars">
-                <img src="./images/thumb/thumbnail_7.jpg" alt="Planet alignment">
-                <img src="./images/thumb/thumbnail_8.jpg" alt="Earth from Mars">
-                <img src="./images/thumb/thumbnail_9.jpg" alt="Image of moon">
+                <img src="./images/thumb/thumbnail_1.jpg" alt="Image of solar system"
+                    onclick="openModal();currentSlide(1)">
+                <img src="./images/thumb/thumbnail_2.jpg" alt="Image of earth" onclick="openModal();currentSlide(2)">
+                <img src="./images/thumb/thumbnail_3.jpg" alt="Image of earth and moon"
+                    onclick="openModal();currentSlide(3)">
+                <img src="./images/thumb/thumbnail_4.jpeg" alt="Freezing earth from outer space"
+                    onclick="openModal();currentSlide(4)">
+                <img src="./images/thumb/thumbnail_5.jpg" alt="Sun and planets" onclick="openModal();currentSlide(5)">
+                <img src="./images/thumb/thumbnail_6.jpg" alt="Image of Mars" onclick="openModal();currentSlide(6)">
+                <img src="./images/thumb/thumbnail_7.jpg" alt="Planet alignment" onclick="openModal();currentSlide(7)">
+                <img src="./images/thumb/thumbnail_8.jpg" alt="Earth from Mars" onclick="openModal();currentSlide(8)">
+                <img src="./images/thumb/thumbnail_9.jpg" alt="Image of moon" onclick="openModal();currentSlide(9)">
             </div>
         </div>
     </section>
     <!-- END GALLERY -->
+
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+
+        <div class="modal-content">
+
+            <div class="mySlides">
+                <img src="./images/thumb/thumbnail_1.jpg" style="width:100%" alt="Image of solar system">
+            </div>
+
+            <div class="mySlides">
+                <img src="./images/thumb/thumbnail_2.jpg" style="width:100%" alt="Image of earth">
+            </div>
+
+            <div class="mySlides">
+                <img src="./images/thumb/thumbnail_3.jpg" style="width:100%" alt="Image of earth and moon">
+            </div>
+
+            <div class="mySlides">
+                <img src="./images/thumb/thumbnail_4.jpeg" style="width:100%" alt="Freezing earth from outer space">
+            </div>
+
+            <div class="mySlides">
+                <img src="./images/thumb/thumbnail_5.jpg" style="width:100%" alt="Sun and planets">
+            </div>
+
+            <div class="mySlides">
+                <img src="./images/thumb/thumbnail_6.jpg" style="width:100%" alt="Image of Mars">
+            </div>
+
+            <div class="mySlides">
+                <img src="./images/thumb/thumbnail_7.jpg" style="width:100%" alt="Planet alignment">
+            </div>
+
+            <div class="mySlides">
+                <img src="./images/thumb/thumbnail_8.jpg" style="width:100%" alt="Earth from Mars">
+            </div>
+
+            <div class="mySlides">
+                <img src="./images/thumb/thumbnail_9.jpg" style="width:100%" alt="Image of moon">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+            <div class="column">
+                <img class="demo" src="./images/thumb/thumbnail_1.jpg" onclick="currentSlide(1)"
+                    alt="Image of solar system">
+            </div>
+            <div class="column">
+                <img class="demo" src="./images/thumb/thumbnail_2.jpg" onclick="currentSlide(2)" alt="Image of earth">
+            </div>
+            <div class="column">
+                <img class="demo" src="./images/thumb/thumbnail_3.jpg" onclick="currentSlide(3)"
+                    alt="Image of earth and moon">
+            </div>
+            <div class="column">
+                <img class="demo" src="./images/thumb/thumbnail_4.jpeg" onclick="currentSlide(4)"
+                    alt="Freezing earth from outer space">
+            </div>
+            <div class="column">
+                <img class="demo" src="./images/thumb/thumbnail_5.jpg" onclick="currentSlide(5)" alt="Sun and planets">
+            </div>
+            <div class="column">
+                <img class="demo" src="./images/thumb/thumbnail_6.jpg" onclick="currentSlide(6)" alt="Image of Mars">
+            </div>
+            <div class="column">
+                <img class="demo" src="./images/thumb/thumbnail_7.jpg" onclick="currentSlide(7)" alt="Planet alignment">
+            </div>
+            <div class="column">
+                <img class="demo" src="./images/thumb/thumbnail_8.jpg" onclick="currentSlide(8)" alt="Earth from Mars">
+            </div>
+            <div class="column">
+                <img class="demo" src="./images/thumb/thumbnail_9.jpg" onclick="currentSlide(9)" alt="Image of moon">
+            </div>
+
+        </div>
+    </div>
+    <!-- END LIGHTBOX MODAL -->
 
 
     <!-- VIDEO SECTION -->
@@ -57,11 +154,8 @@
         <div id="video">
             <h1>Launch Experience</h1>
 
-            <iframe width="560" height="315"
-                src="https://www.youtube.com/embed/abc123XYZ"
-                title="Space Launch Video"
-                frameborder="0"
-                allowfullscreen>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/abc123XYZ" title="Space Launch Video"
+                frameborder="0" allowfullscreen>
             </iframe>
 
         </div>
@@ -82,7 +176,6 @@
             <p>Please provide us with your contact information.</p>
 
             <form action="" method="post">
-
                 <input type="text" name="first_name" placeholder="First Name">
                 <input type="text" name="last_name" placeholder="Last Name">
                 <input type="email" name="email" placeholder="Email Address">
@@ -91,7 +184,6 @@
                 <br><br>
 
                 <input type="submit" value="Submit">
-
             </form>
         </div>
     </section>
@@ -104,5 +196,10 @@
     </footer>
     <!-- END FOOTER -->
 
+
+    <!-- JAVASCRIPT FILE -->
+    <script src="./JS/one_page_website.js"></script>
+
 </body>
+
 </html>
